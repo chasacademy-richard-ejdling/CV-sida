@@ -104,7 +104,68 @@ header {
 /* Main */
 main {
     margin-left: 100px;
+}
+
+/* Index main */
+.index-main {
+    display: grid;
     text-align: center;
+}
+
+svg, .welcome-message {
+    grid-row: 1;
+    grid-column: 1;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+svg {
+    margin-top: 100px;
+
+}
+
+svg text{
+    font-size: 60px;
+}
+
+.w:hover {
+    fill: red;
+    font-size: 75px;
+}
+
+.e:hover {
+    fill: orange;
+    font-size: 75px;
+}
+
+.l:hover {
+    fill: yellow;
+    font-size: 75px;
+}
+
+.c:hover {
+    fill: limegreen;
+    font-size: 75px;
+}
+
+.o:hover {
+    fill: blue;
+    font-size: 75px;
+}
+
+.m:hover {
+    fill: indigo;
+    font-size: 75px;
+}
+
+.e2:hover {
+    fill: violet;
+    font-size: 75px;
+}
+
+.welcome-message {
+    align-self: end;
+    font-size: clamp(20px, 4vw, 54px);
 }
 
 /* Mobile */
