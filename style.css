@@ -128,39 +128,43 @@ svg text{
     font-size: 60px;
 }
 
-.w:hover {
-    fill: red;
-    font-size: 75px;
+.w-big, .e-big, .l-big, .c-big, .o-big, .m-big, .e2-big {
+    display: none;
 }
 
-.e:hover {
-    fill: orange;
-    font-size: 75px;
+.w:hover + .w-big {
+    pointer-events: none;
+    display: block;
 }
 
-.l:hover {
-    fill: yellow;
-    font-size: 75px;
+.e:hover + .e-big {
+    pointer-events: none;
+    display: block;
 }
 
-.c:hover {
-    fill: limegreen;
-    font-size: 75px;
+.l:hover + .l-big {
+    pointer-events: none;
+    display: block;
 }
 
-.o:hover {
-    fill: blue;
-    font-size: 75px;
+.c:hover + .c-big {
+    pointer-events: none;
+    display: block;
 }
 
-.m:hover {
-    fill: indigo;
-    font-size: 75px;
+.o:hover + .o-big {
+    pointer-events: none;
+    display: block;
 }
 
-.e2:hover {
-    fill: violet;
-    font-size: 75px;
+.m:hover + .m-big {
+    pointer-events: none;
+    display: block;
+}
+
+.e2:hover + .e2-big {
+    pointer-events: none;
+    display: block;
 }
 
 .welcome-message {
