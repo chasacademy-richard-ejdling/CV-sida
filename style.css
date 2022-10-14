@@ -3,14 +3,15 @@
     box-sizing: border-box;
 }
 
+
+/* Desktop */
 body {
-    box-sizing: border-box;
-    margin: 0;
     /* display: flex; */
     height: 100vh;
 }
 
-nav {
+/* Header/nav */
+header {
     background: aqua;
     position: fixed;
     top: 0;
@@ -29,7 +30,7 @@ nav {
 
 .nav-list {
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
     text-align: center;
 }
 
@@ -70,13 +71,14 @@ nav {
     grid-column: 1;
 } */
 
-.hover-shape, .nav-list-item-link/* -text */, .page-marker {
+.hover-shape,.nav-list-item-link, .page-marker {
     grid-row: 1;
     grid-column: 1;
 }
 
 .nav-list-item-link-text {
     margin: 32px 0;
+    color: blue;
 }
 
 .page-marker {
@@ -97,7 +99,7 @@ nav {
     /* transition: border 1s ease; */
 }
 
-.nav-list-item-link:hover ~ .hover-shape{
+.nav-list-item-link:hover~.hover-shape {
     border-right-color: indianred;
     transition: border .28s ease;
 }
@@ -110,7 +112,73 @@ nav {
     border-bottom: 41px solid transparent;
 } */
 
+/* Main */
 main {
     margin-left: 100px;
     text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header/nav */
+    header {
+        height: 80px;
+        width: 100vw;
+        display: flex;
+    }
+
+    .user-avatar {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .nav-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-list-item-link {
+        border-radius: 0%;
+    }
+
+    .nav-list-item-link:hover .nav-text-hover{
+        color: crimson;
+        text-decoration: underline;
+        text-underline-offset: .2em;
+    }
+
+    .nav-list-item-link:active .nav-text-hover{
+        color: rgb(220, 157, 20);
+    }
+
+    .page-text-color {
+        color: limegreen;
+        text-decoration: underline;
+        text-underline-offset: .2em;
+    }
+
+    .nav-list-item-link-text {
+        margin: 0;
+    }
+
+    .page-marker {
+        display: none;
+    }
+
+    .hover-shape {
+        display: none;
+    }
+    
+    /* Main */
+    main {
+        margin-left: 0;
+        margin-top: 80px;
+    }
 }
