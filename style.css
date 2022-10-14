@@ -41,17 +41,6 @@ header {
     /* border-radius: 100% 0% 0% 100% / 50% 0% 0% 50%; */
 }
 
-.nav-list-item:hover {
-    /* background: white;
-    transition: background-color .28s ease;
-    border-radius: 80% 20% 20% 80% / 50% 5% 5% 50%; */
-    /* width: 0;
-    height: 0;
-    border-top: 41px solid transparent;
-    border-right: 100px solid white;
-    border-bottom: 41px solid transparent; */
-}
-
 .nav-list-item-link {
     text-decoration: none;
     /* display: inline-block; */
