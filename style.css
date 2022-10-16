@@ -172,6 +172,84 @@ svg text{
     font-size: clamp(20px, 4vw, 54px);
 }
 
+/* Portfolio main */
+.portfolio-hero {
+    background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80) center/cover;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.projects {
+    
+}
+
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.projects ul li figure {
+    overflow: hidden;
+    height: 125px;
+    position: relative;
+}
+
+.projects ul li figure img {
+    width: 100%;
+}
+
+.projects ul li figure figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: .2rem;
+}
+
+.project-links {
+    padding: .3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+}
+
+.project-button {
+    background-color: green;
+    padding: 0.3em 0.5em;
+    border-radius: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.project-button:hover {
+    background-color: rgb(0, 177, 0);
+    transition: background-color .1s ease;
+}
+
+.github-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.github-logo img {
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+}
+
+.github-logo:hover img{
+    padding: 0;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     /* Header/nav */
@@ -179,6 +257,7 @@ svg text{
         height: 80px;
         width: 100vw;
         display: flex;
+        position: static;
     }
 
     .user-avatar {
@@ -233,6 +312,6 @@ svg text{
     /* Main */
     main {
         margin-left: 0;
-        margin-top: 80px;
+        /* margin-top: 80px; */
     }
 }
