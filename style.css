@@ -198,8 +198,12 @@ svg text {
     text-align: center;
 }
 
-.about-main p {
+.about-text {
     margin: 0 10vw;
+}
+
+.about-text address {
+    margin-top: 25px;
 }
 
 /* CV main */
@@ -211,7 +215,7 @@ svg text {
 
 .cv-main h1 {
     /* text-align: center; */
-    margin: 10px 0;
+    margin: 5vh 0;
 }
 
 .cv-content {
