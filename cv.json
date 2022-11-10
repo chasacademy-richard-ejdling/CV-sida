@@ -1,0 +1,32 @@
+{
+    "education": {
+        "icon": "fa-graduation-cap",
+        "title": "Education",
+        "content": [
+            {
+                "type": "Bachelers Program Biology | Stockholm University",
+                "timespan": "2018-2021",
+                "extra": "150HP"
+            }
+        ]
+    },
+    "workExperience": {
+        "icon": "fa-briefcase",
+        "title": "Work Experience",
+        "content": [
+            {
+                "type": "Park Maintenance | Nabbo Samfällighetsförening",
+                "timespan": "2015-2020",
+                "extra": "Summer Job: Forest Maintenance, Beach Maintenance, Painting, Carpentry etc."
+            }
+        ]
+    },
+    "competencies": {
+        "icon": "fa-wrench",
+        "title": "Competencies",
+        "content": [
+            "Languages: Swedish, English",
+            "Basic HTML, CSS and JavaScript"
+        ]
+    }
+}
