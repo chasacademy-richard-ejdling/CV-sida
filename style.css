@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
+:root {
+    --bg-color-dark: #233165;
+    --bg-color-light: white;
+    --nav-bg-color: #324690;
+    --red-accent-color: rgb(222, 57, 57);
+    --text-color-dark: white;
+    --text-color-light: #233165;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -10,11 +19,13 @@
 body {
     /* display: flex; */
     height: 100vh;
+    background: var(--bg-color-dark);
+    color: var(--text-color-dark);
 }
 
 /* Header/nav */
 header {
-    background: aqua;
+    background: var(--nav-bg-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -71,14 +82,14 @@ header {
 
 .nav-list-item-link-text {
     margin: 32px 0;
-    color: blue;
+    color: var(--text-color-dark);
 }
 
 .page-marker {
     width: 0;
     height: 0;
     border-top: 41px solid transparent;
-    border-right: 100px solid white;
+    border-right: 100px solid var(--bg-color-dark);
     border-bottom: 41px solid transparent;
     z-index: 1;
 }
@@ -93,7 +104,7 @@ header {
 }
 
 .nav-list-item-link:hover~.hover-shape {
-    border-right-color: indianred;
+    border-right-color: var(--red-accent-color);
     transition: border .28s ease;
 }
 
@@ -114,6 +125,7 @@ main {
 .index-main {
     display: grid;
     text-align: center;
+    fill: var(--text-color-dark);
 }
 
 svg,
@@ -141,6 +153,10 @@ svg text {
 .m-big,
 .e2-big {
     display: none;
+}
+
+.welcome-color:hover {
+    fill: var(--bg-color-dark);
 }
 
 .w:hover+.w-big {
@@ -233,7 +249,7 @@ svg text {
 /* .education, .work-experience, .competencies {
     /* display: flex;
     flex-direction: column; */
-    /*display: grid;
+/*display: grid;
     grid-template-columns: repeat(fit-content);
 } */
 
@@ -253,10 +269,13 @@ svg text {
     grid-column: 1;
     place-self: center;
     margin-right: 1rem;
-    color: red;
+    color: var(--red-accent-color);
 }
 
-.cv-content h2, .cv-content p, .cv-content small, .cv-content ul {
+.cv-content h2,
+.cv-content p,
+.cv-content small,
+.cv-content ul {
     grid-column: 2;
     align-self: center;
 }
@@ -337,8 +356,47 @@ svg text {
     padding: 0;
 }
 
+/* Light/Dark Mode */
+.light-dark-mode-button{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 80px;
+    margin: 10px;
+}
+
+.light-mode-main {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+.light-mode-nav-text {
+    color: var(--text-color-light);
+}
+
+.light-mode-nav-page-marker {
+    border-right-color: var(--bg-color-light);
+}
+
+.light-mode-welcome {
+    fill: var(--text-color-light);
+}
+
+.light-mode-welcome-hover:hover {
+    fill: var(--bg-color-light);
+}
+
 /* Mobile */
-@media (max-width: 768px), (max-height: 450px) { /* Fix Mobile landscape mode */
+@media (max-width: 768px),
+(max-height: 450px) {
+    /* Fix Mobile landscape mode */
+
+    /* Light/Dark Mode Button */
+    /* .light-dark-mode-button {
+        width: 5vw;
+    } */
+
     /* Header/nav */
     header {
         height: 80px;
@@ -369,17 +427,17 @@ svg text {
     }
 
     .nav-list-item-link:hover .nav-text-hover {
-        color: crimson;
+        color: red;
         text-decoration: underline;
         text-underline-offset: .2em;
     }
 
-    .nav-list-item-link:active .nav-text-hover {
+    /* .nav-list-item-link:active .nav-text-hover {
         color: rgb(220, 157, 20);
-    }
+    } */
 
     .page-text-color {
-        color: limegreen;
+        color: var(--red-accent-color);
         text-decoration: underline;
         text-underline-offset: .2em;
     }
